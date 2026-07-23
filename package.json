@@ -38,9 +38,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {},
-  "optionalDependencies": {
+  "peerDependencies": {
     "playwright": "^1.48.0",
     "@axe-core/playwright": "^4.10.0",
     "lighthouse": "^12.2.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": { "optional": true },
+    "@axe-core/playwright": { "optional": true },
+    "lighthouse": { "optional": true }
   }
 }
