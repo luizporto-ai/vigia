@@ -1,0 +1,29 @@
+# Example: gate your own site's deploys with vigia.
+# Copy this into your project's .github/workflows/.
+name: vigia audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: URL to audit
+        required: true
+        default: https://example.com
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install browsers (for full cross-browser + perf coverage)
+        run: npx playwright install --with-deps chromium webkit firefox
+      - name: Run vigia
+        run: npx vigia "${{ inputs.url }}" --ci --md vigia-report.md
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vigia-report
+          path: vigia-report.md

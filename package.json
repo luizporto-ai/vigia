@@ -1,0 +1,46 @@
+{
+  "name": "vigia",
+  "version": "0.1.0",
+  "description": "Your lookout for what breaks before users do — an honest, framework-agnostic website auditor (responsiveness, cross-browser/WebKit, broken layout, smoke errors, HTTP delivery, performance).",
+  "type": "module",
+  "bin": {
+    "vigia": "bin/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "SKILL.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "vigia": "node bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "website",
+    "auditor",
+    "cross-browser",
+    "safari",
+    "webkit",
+    "responsive",
+    "performance",
+    "lighthouse",
+    "playwright",
+    "accessibility",
+    "qa",
+    "ci"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "optionalDependencies": {
+    "playwright": "^1.48.0",
+    "@axe-core/playwright": "^4.10.0",
+    "lighthouse": "^12.2.0"
+  }
+}
