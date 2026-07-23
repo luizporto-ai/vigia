@@ -1,0 +1,36 @@
+# Secure publish to npm with provenance.
+#
+# Provenance cryptographically ties each published tarball to this repo + the exact
+# commit and workflow run that built it, so anyone can verify it wasn't tampered with
+# (npmjs.com shows a "Provenance" badge). Requires:
+#   - a public repo (this one)
+#   - id-token: write permission (below)
+#   - an NPM_TOKEN repo secret: a granular automation token from npmjs.com
+#     (Account > Access Tokens > Generate > Granular, read+write for @luizporto/vigia).
+#
+# To cut a release: bump "version" in package.json, commit, then publish a GitHub
+# Release (Releases > Draft a new release > new tag like v0.2.0). This workflow runs it.
+name: publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # required for provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+      - run: node --test
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
