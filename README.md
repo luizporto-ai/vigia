@@ -1,10 +1,10 @@
 <h1 align="center">vigia</h1>
 
-<p align="center"><b>Your lookout for what breaks before users do.</b></p>
+<p align="center"><b>Your lookout for what breaks before your users do.</b></p>
 
 <p align="center">
-A framework-agnostic website auditor that's honest about what it can and can't prove.
-It checks responsiveness, cross-browser rendering (yes, WebKit/Safari), broken layout,
+A website auditor that works with any framework and stays honest about what it can prove.
+It checks responsiveness, cross-browser rendering (Safari/WebKit included), broken layout,
 smoke errors, HTTP delivery, and performance, then hands you one ranked report.<br/>
 <b>It diagnoses. It never touches your code.</b>
 </p>
