@@ -38,6 +38,12 @@
     "qa",
     "ci"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizporto-ai/vigia.git"
+  },
+  "homepage": "https://github.com/luizporto-ai/vigia#readme",
+  "bugs": "https://github.com/luizporto-ai/vigia/issues",
   "author": "",
   "license": "MIT",
   "dependencies": {},
