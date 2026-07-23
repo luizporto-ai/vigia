@@ -104,6 +104,18 @@ heavy blur. Lighthouse runs the performance budget. A DNS delegation snapshot ba
 Safari/Private-Relay runbook. No telemetry, and no network calls except to the site you point
 it at.
 
+## How it compares
+
+vigia runs Lighthouse under the hood for performance, then covers the ground Lighthouse doesn't.
+
+| Tool | Best at | The gap vigia fills |
+|------|---------|---------------------|
+| **Lighthouse** | Performance, SEO, a11y on one page (Chromium only) | Cross-browser rendering, WebKit/Safari, layout breakage across viewports, HTTP delivery |
+| **Playwright / Cypress** | A framework to write your own browser tests | vigia ships the checks. Nothing to author or maintain. |
+| **Real device testing** | Ground truth (an actual iPhone) | vigia catches most of it in seconds, and tells you exactly what still needs a device |
+
+It doesn't replace a real iPhone. It tells you when you need one, and handles everything you don't.
+
 ## Contributing
 
 A check is one file in `src/probes/` that exports `{ id, title, appliesTo, run(ctx) }` and
