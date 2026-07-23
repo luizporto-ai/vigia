@@ -21,7 +21,7 @@ one prioritized report.<br/>
 ## Try it in 5 seconds (no install)
 
 ```bash
-npx vigia https://your-site.com
+npx @luizporto/vigia https://your-site.com
 ```
 
 That's it. You get a ranked report: 🔴 blockers → 🟡 warnings → ✓ passes — each with
@@ -76,8 +76,8 @@ Every finding is one of two kinds: a **verdict** (proven fact) or a **hypothesis
 ### For developers
 
 ```bash
-npx vigia <url|dir>              # one-off, no install
-npm i -D vigia                   # project dependency
+npx @luizporto/vigia <url|dir>              # one-off, no install
+npm i -D @luizporto/vigia                   # project dependency
 
 # full cross-browser + performance coverage (once):
 npm i -D playwright lighthouse @axe-core/playwright && npx playwright install
@@ -87,7 +87,7 @@ npm i -D playwright lighthouse @axe-core/playwright && npx playwright install
 
 ```yaml
 # .github/workflows/vigia.yml
-- run: npx vigia https://your-site.com --ci --md vigia-report.md
+- run: npx @luizporto/vigia https://your-site.com --ci --md vigia-report.md
 ```
 
 `--ci` exits non-zero if any critical/high **verdict** fails.

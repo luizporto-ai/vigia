@@ -1,6 +1,9 @@
 {
-  "name": "vigia",
+  "name": "@luizporto/vigia",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Your lookout for what breaks before users do — an honest, framework-agnostic website auditor (responsiveness, cross-browser/WebKit, broken layout, smoke errors, HTTP delivery, performance).",
   "type": "module",
   "bin": {

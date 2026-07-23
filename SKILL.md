@@ -13,16 +13,16 @@ findings** — vigia itself only diagnoses.
 
 ```bash
 # Live URL
-npx vigia https://example.com --json /tmp/vigia.json
+npx @luizporto/vigia https://example.com --json /tmp/vigia.json
 
 # Local build (serves the dir in a headless browser)
-npx vigia ./dist --json /tmp/vigia.json
+npx @luizporto/vigia ./dist --json /tmp/vigia.json
 
 # CI gate (exit 1 if any critical/high verdict fails)
-npx vigia https://example.com --ci
+npx @luizporto/vigia https://example.com --ci
 
 # Scope to cheap probes (no browser needed)
-npx vigia https://example.com --only headers,static,dns
+npx @luizporto/vigia https://example.com --only headers,static,dns
 ```
 
 Full browser/perf coverage needs Playwright + Lighthouse once:
