@@ -11,9 +11,10 @@ smoke errors, HTTP delivery, and performance, then hands you one ranked report.<
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@luizporto/vigia"><img alt="npm" src="https://img.shields.io/npm/v/@luizporto/vigia?color=black"></a>
+  <a href="https://github.com/luizporto-ai/vigia/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/luizporto-ai/vigia/actions/workflows/ci.yml/badge.svg"></a>
   <a href="#license"><img alt="license MIT" src="https://img.shields.io/badge/license-MIT-black"></a>
+  <img alt="tested on Windows, macOS, Linux" src="https://img.shields.io/badge/tested-Windows_·_macOS_·_Linux-black">
   <img alt="node 18.17+" src="https://img.shields.io/badge/node-18.17%2B-black">
-  <img alt="WebKit tested" src="https://img.shields.io/badge/WebKit-tested-black">
   <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-Skill-black">
 </p>
 
